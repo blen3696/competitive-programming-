@@ -1,3 +1,9 @@
+'''You are given two arrays, sorted in non-decreasing order. For each element of the second 
+array, find the number of elements in the first array are that strictly less than it.
+ Input
+ Two sorted arrays.
+ Output
+ A single sorted array containing all elements from both arrays'''
 def countSmaller(nums1, nums2):
     arr = []
     l = 0

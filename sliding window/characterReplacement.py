@@ -1,11 +1,10 @@
 '''424. Longest Repeating Character Replacement
-Solved
-Medium
-Topics
-Companies
-You are given a string s and an integer k. You can choose any character of the string and change it to any other uppercase English character. You can perform this operation at most k times.
 
-Return the length of the longest substring containing the same letter you can get after performing the above operations.
+You are given a string s and an integer k. You can choose any character of the string 
+and change it to any other uppercase English character. You can perform this operation at most k times.
+
+Return the length of the longest substring containing the same letter you can get 
+after performing the above operations.
 
  
 
@@ -36,13 +35,14 @@ class Solution(object):
         Scount = {}
 
         while r < len(s):
-            Scount[s[r]] = 1 + Scount.get(s[r],0)
+            Scount[s[r]] = 1 + Scount.get(s[r],0)\
+                
             while (r - l + 1) - max(Scount.values()) > k:
                 Scount[s[l]] -=1
                 l +=1
                 
-            if  (r - l + 1) - max(Scount.values()) <= k:
-                max_len = max(max_len, r - l + 1)   
-                r +=1  
+           
+            max_len = max(max_len, r - l + 1)   
+            r +=1  
             
         return max_len

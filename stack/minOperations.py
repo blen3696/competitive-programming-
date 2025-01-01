@@ -1,9 +1,5 @@
 '''1598. Crawler Log Folder
-Solved
-Easy
-Topics
-Companies
-Hint
+
 The Leetcode file system keeps a log each time some user performs a change folder operation.
 
 The operations are described below:

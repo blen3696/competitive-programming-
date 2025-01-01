@@ -1,14 +1,13 @@
 '''1208. Get Equal Substrings Within Budget
-Solved
-Medium
-Topics
-Companies
-Hint
+
 You are given two strings s and t of the same length and an integer maxCost.
 
-You want to change s to t. Changing the ith character of s to ith character of t costs |s[i] - t[i]| (i.e., the absolute difference between the ASCII values of the characters).
+You want to change s to t. Changing the ith character of s to ith character of 
+t costs |s[i] - t[i]| (i.e., the absolute difference between the ASCII values of the characters).
 
-Return the maximum length of a substring of s that can be changed to be the same as the corresponding substring of t with a cost less than or equal to maxCost. If there is no substring from s that can be changed to its corresponding substring from t, return 0.
+Return the maximum length of a substring of s that can be changed to be the same 
+as the corresponding substring of t with a cost less than or equal to maxCost. 
+If there is no substring from s that can be changed to its corresponding substring from t, return 0.
 
  
 
@@ -42,8 +41,8 @@ class Solution(object):
         total_cost = 0
         max_len = 0
         while r < len(s):
-            cost = abs(ord(s[r]) - ord(t[r]))
-            total_cost = total_cost + cost
+            total_cost += abs(ord(s[r]) - ord(t[r]))
+            
             while total_cost > maxCost:
                 total_cost -= abs(ord(s[l]) - ord(t[l]))
                 l += 1
